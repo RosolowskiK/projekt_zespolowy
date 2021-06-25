@@ -1,18 +1,19 @@
-import Vechicle
+from Vehicle import Vehicle
 import random
 import json
 
+
 class Camera:
-    auto = Vechicle()
+    # auto = Vehicle()
 
-    def __init__(self):
-        color = ["red", "blue", "green", "yellow", "purple", "orange", "white", "black"]
-        a = random.randrange(0,len(color))
-        number = "WKZ "+str(random.randrange(1000,10000))
-        auto.setVechicle(number,a)
+    def __init__(self, controller):
+        self.controller = controller
 
-        dict = {"plateNumber": number, "color": color}
-        with open("vechicleData.txt", "a") as db:
-            json.dump(dict, db, indent=2)
+    def car_in(self):
+        car = Vehicle()
+        self.controller.car_in(car)
 
+    def car_out(self):
+        car = self.controller.get_random_cart_in_parking()
+        self.controller.car_out(car)
 
