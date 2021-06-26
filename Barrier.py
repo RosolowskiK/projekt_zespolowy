@@ -1,17 +1,17 @@
 class Barrier:
-    open = False;
+    openStatus = False;
 
     def __init__(self):
         pass
 
     def open(self):
-        self.open = True;
+        self.openStatus = True;
         print("The barrier opens")
 
     def close(self):
-        self.open = False;
+        self.openStatus = False;
         print("The barrier closes")
 
     def is_open(self):
-        return self.open
+        return self.openStatus
 
