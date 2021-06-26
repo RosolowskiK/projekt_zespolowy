@@ -1,16 +1,20 @@
-# This is a sample Python script.
+from Controller import Controller
+from Camera import Camera
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    parking_open = True
+    controller = Controller()
+    camera = Camera(controller)
 
-# See PyCharm help at https://www.jetbrains.com/help/pyc harm/
+    while parking_open:
+        command = input()
+
+        if command == 'in':
+            camera.car_in()
+        elif command == 'out':
+            camera.car_out()
+        elif command == 'list':
+            for car in controller.get_cars_in_parking():
+                print(car)
+        elif command == 'close':
+            parking_open = False
