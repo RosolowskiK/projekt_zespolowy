@@ -1,6 +1,7 @@
 import sys
 
 
+
 class Printer:
 
     def __init__(self):
@@ -17,6 +18,11 @@ class Printer:
 
     def get_parking_cost(self, vehicle):
         parking_time = vehicle.get_parking_time()
+        total_cost = 0
         for times, cost in self.paring_cost.items():
             if times[0] <= parking_time <= times[1]:
-                return cost
+                total_cost = cost
+
+        with open("resources/fees_data.txt", "a", encoding="UTF-8") as plik:
+            plik.write(str(vehicle)+"\n Postój: "+str(vehicle.get_parking_time())+ "\n Oplata: "+ str(total_cost)+"\n")
+        return total_cost
