@@ -16,6 +16,9 @@ class Vehicle:
         self.parking_is_paid = False
         print(f'parking start time: {self.time_start}')
 
+        with open("resources/vechicleData.txt", "a") as plik:
+            plik.write(str(self) +"\n TimeStart: "+ str(self.time_start))
+
     def __str__(self):
         return f'Color: {self.car_color}, Number: {self.car_number}, Parking start: {self.time_start}'
 

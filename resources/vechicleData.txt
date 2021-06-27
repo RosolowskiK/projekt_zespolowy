@@ -1,0 +1,2 @@
+Color: green, Number: WKZ 6030, Parking start: 2021-06-27 12:38:51.582099
+ TimeStart: 2021-06-27 12:38:51.582099

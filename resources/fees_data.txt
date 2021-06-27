@@ -4,3 +4,6 @@ Color: green, Number: WKZ 3756, Parking start: 2021-06-27 00:12:47.237386
 Color: white, Number: WKZ 1441, Parking start: 2021-06-27 00:14:00.485758
  Postój: 160.07866861666668
  Oplata: 2
+Color: green, Number: WKZ 6030, Parking start: 2021-06-27 12:38:51.582099
+ Postój: 320.14249639999997
+ Oplata: 10
